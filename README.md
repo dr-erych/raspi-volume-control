@@ -1,5 +1,10 @@
 # raspi-volume-control
 
+Currently this is only for personal use.  
+The amixer command needs to be changed to a more generic version.  
+
+
+
 To be able to run it on port 80, do the following:
 
 ```bash
