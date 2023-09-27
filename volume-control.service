@@ -1,0 +1,18 @@
+[Unit]
+Description=Volume control HTTP API
+After=network.target
+
+[Service]
+Environment=PORT=80
+Type=simple
+ExecStart=/usr/local/bin/node /var/www/volume-control/index.js
+Restart=always
+User=pi
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=pi
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/volume-control
+
+[Install]
+WantedBy=multi-user.target
